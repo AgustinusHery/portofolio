@@ -1,0 +1,277 @@
+<html lang="en">
+<head>
+  <title>Hery Portofolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#beranda">Agustinus Hery Siswanto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Saya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman Kerja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sosmed">Sosial media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<!-- beranda section-->
+	<section class="bgimage" id="beranda">
+        <div class="container-fluid">
+            <div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+					<p class="hero_desc">Tidak ada istilah gagal dalam hidup,<br>
+					yang ada hanya sukses dan belum berhasil.<br>
+					Jangan menyerah!</p>
+					<?php
+                        date_default_timezone_set("Asia/Bangkok");
+                    ?>
+                    <script type="text/javascript">
+                        function date_time(id) {
+	                        date = new Date;
+	                        year = date.getFullYear();
+	                        month = date.getMonth();
+	                        months = new Array('Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
+	                        d = date.getDate();
+	                        day = date.getDay();
+	                        days = new Array('Minggu,', 'Senin,', 'Selasa,', 'Rabu,', 'Kamis,', 'Jumat,', 'Sabtu,');
+	                        h = date.getHours();
+	
+	                        if(h<10) {
+		                        h = "0"+h;
+	                        }
+	                        m = date.getMinutes();
+	
+	                        if(m<10) {
+		                        m = "0"+m;
+	                        }
+	                        s = date.getSeconds();
+	
+	                        if(s<10) {
+		                        s = "0"+s;
+	                        }
+	
+	                        result = ''+days[day]+' '+d+' '+months[month]+' '+year+' '+h+':'+m+':'+s;
+	                        document.getElementById(id).innerHTML = result;
+	                        setTimeout('date_time("'+id+'");','1000');
+	                        return true;
+                        }
+                    </script>
+                    <span id="date_time"></span>
+                    <script type="text/javascript">window.onload = date_time('date_time');</script>
+				</div>
+            </div>
+        </div>
+    </section>
+	<!-- tentang section-->
+	<section id="tentang">
+        <div class="container mt-4 pt-4">
+            <h2 class="text-center">Tentang Saya</h2>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="tentang.png" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Nama: Agustinus Hery Siswanto</li>
+                                <li>Umur: 29 Tahun</li>
+                                <li>Keahlian: HTML, PHP, Java, MySQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <p> Mahasiswa aktif program studi Teknik Informatika di Universitas Indraprasta PGRI, Jakarta Selatan.
+						Pernah mengikuti pelatihan Google New Ads (bersertifikat), dan pelatihan Junior Web Developer (bersertifikat) dari program Digital Talent Scholarship yang diselenggarakan oleh Kominfo.
+						<br>Saya mempunyai kemampuan berkomunikasi dan empati yang tinggi.
+						<br>Sedang mencari perusahaan untuk mengaplikasikan pengalaman 7 tahun sebagai Administrasi. 
+						<br>Mencari posisi UI / UX designer sebagai wadah saya untuk menciptakan website yang user friendly dan responsive.
+						<br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+	<!-- pengalaman section-->
+	<section id="pengalaman">
+        <div class="container">
+            <h1 class="text-center">Pengalaman Kerja</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-layer-group'></i>
+                            <h4 class="card-title mt-3">RS. Premier Jatinegara<br>(2013-2018)</h4>
+                            <p align="center" class="card-text mt-3">Administrasi Laundry (Part Time)<br></p>
+							<p align="center" class="card-text mt-3">Mendistribusikan Laundry ke ruangan-ruangan yang ada di rumah sakit dan membuat invoice penagihan setiap 2 minggu sekali</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <i class='fas servicesIcon fa-shield-alt'></i>
+                            <h4 class="card-title mt-3">PT. Seino Indomobil Logistics (2018-2020)</h4>
+                            <p align="center" class="card-text mt-3">Admin CCD (Kasir)<br></p>
+							<p align="center" class="card-text mt-3">Memproses data menggunakan sistem, data tersebut diolah menjadi excel lalu di import ke website bank untuk melakukan proses transfer</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- sosmed section-->
+    <section id="sosmed">
+        <div class="container mt-3">
+            <h1 class="text-center">Sosial Media</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <div class="card-body">
+                            <h4 class="card-title">Instagram</h4>
+                            <div class="text-center">
+                                <a href="https://www.instagram.com/agustinushery02/" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4"> 
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <div class="card-body">
+                            <h4 class="card-title">Whatsapp</h4>
+                            <div class="text-center">
+                                <a href="https://api.whatsapp.com/send?phone=6289638714643" class="btn btn-success">Chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br>
+            <div class="row">
+                <div class="col-lg-4 mt-4"> 
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <div class="card-body">
+                            <h4 class="card-title">Blogspot</h4>
+                            <div class="text-center">
+                                <a href="https://agustinushery02.blogspot.com" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<br>
+            <div class="row">
+                <div class="col-lg-4 mt-4"> 
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <div class="card-body">
+                            <h4 class="card-title">LinkedIn</h4>
+                            <div class="text-center">
+                                <a href="https://www.linkedin.com/mwlite/in/agustinus-hery-286a6a1b3" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4"> 
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <div class="card-body">
+                            <h4 class="card-title">Project Kampus</h4>
+                            <div class="text-center">
+								<p>Login menggunakan<br>Username dan Password: admin</p>
+                                <a href="https://apotik-unindra.000webhostapp.com" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- Lokasi section-->
+    <section id="lokasi">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Lokasi</h1>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:380px;">
+                        <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;align:center;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Gardu,+RT.7/RW.3,+Balekambang,+Kota+Jakarta+Timur,+Daerah+Khusus+Ibukota+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+							</iframe>
+                        </div>
+                        <a align="center" class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                        <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                        </style>
+                    </div>
+                </div>
+				<div class="col-lg-6">
+                    <!-- form fields -->
+                    <form action="https://formspree.io/f/xnqkjdjy" method="POST">
+                        <input type="text" class="form-control form-control-lg" placeholder="Nama">
+                        <input type="email" class="form-control mt-3" placeholder="Email">
+                        <input type="text" class="form-control mt-3" placeholder="Subjek">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Detail"></textarea>
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-success mt-3">Kirim</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+	 <!-- footer section-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <!-- social media icons -->
+            <div class="social-icons mt-4">
+				<a href="https://www.instagram.com/agustinushery02/"><i class="fab fa-instagram"></i></a>
+				<a href="https://api.whatsapp.com/send?phone=6289638714643"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://agustinushery02.blogspot.com"><i class="fab fa-blogger"></i></a>
+                <a href="https://www.linkedin.com/mwlite/in/agustinus-hery-286a6a1b3"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- load javascript after loading all html content -->
+    <script src="script/script.js"></script>
+</body>
+</html>
