@@ -1,6 +1,6 @@
 .bgimage {
     height:100vh;
-    background: url('/assets/images/background.png');
+    background: url('../images/background.png');
     background-size:cover;
     position:relative;
 }
@@ -20,9 +20,11 @@
     color: white;
 }
 .imageAboutPage {
-    width: 250px;
-    height: 300px;
-    object-fit: contain;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 .servicesText.card {
     height: 280px;
@@ -66,4 +68,9 @@
 }
 #contact {
     padding-bottom: 4rem;
+}
+@media (max-width: 768px) {
+    .imageAboutPage {
+        margin: 20px auto;
+    }
 }
