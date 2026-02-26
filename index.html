@@ -91,7 +91,7 @@
                         <div class="col-md-6">
                             <ul>
                                 <li>Nama: Agustinus Hery Siswanto</li>
-                                <li>Umur: 29 Tahun</li>
+                                <li>Umur: <span id="umur"></span> Tahun</li>
                                 <li>Keahlian: HTML, PHP, Java, MySQL</li>
                             </ul>
                         </div>
@@ -276,5 +276,18 @@
     </footer>
     <!-- load javascript after loading all html content -->
     <script src="script/script.js"></script>
+	<script>
+		function hitungUmur() {
+   			var tahunLahir = 1994;
+    		var tahunSekarang = new Date().getFullYear();
+    		var umur = tahunSekarang - tahunLahir;
+    		document.getElementById("umur").innerHTML = umur;
+		}
+
+		window.onload = function() {
+    		date_time('date_time');
+    		hitungUmur();
+		}
+	</script>
 </body>
 </html>
