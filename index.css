@@ -1,6 +1,6 @@
 .bgimage {
     height:100vh;
-    background: url('background.png');
+    background: url('assets/images/background.png');
     background-size:cover;
     position:relative;
 }
@@ -75,4 +75,8 @@
     .imageAboutPage {
         margin: 20px auto;
     }
+<<<<<<< HEAD:index.css
 }
+=======
+}
+>>>>>>> b1dcca119b255a3b89bbd5616bb62d9799a830ad:assets/css/index.css
