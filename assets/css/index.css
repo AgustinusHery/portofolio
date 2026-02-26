@@ -20,9 +20,8 @@
     color: white;
 }
 .imageAboutPage {
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
+    width: 300px;
+    height: auto;
     border-radius: 12px;
 }
 .servicesText.card {
