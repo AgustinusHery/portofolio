@@ -20,7 +20,10 @@
     color: white;
 }
 .imageAboutPage {
-    width: 100%;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 .servicesText.card {
     height: 280px;
