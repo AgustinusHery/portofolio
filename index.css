@@ -1,10 +1,12 @@
+/* Hero Section */
 .bgimage {
-    height:100vh;
+    height: 100vh;
     background: url('background.png');
-    background-size:cover;
-    position:relative;
+    background-size: cover;
+    position: relative;
 }
-/* text css above hero image*/
+
+/* Text above hero image */
 .hero_title {
     font-size: 4.5rem;
 }
@@ -19,6 +21,8 @@
     transform: translate(-50%, -50%);
     color: white;
 }
+
+/* About Image */
 .imageAboutPage {
     width: 100%;
     max-width: 220px;
@@ -28,10 +32,12 @@
     margin-right: auto;
     border-radius: 20px;
 }
+
+/* Services Cards */
 .servicesText.card {
     height: 280px;
     cursor: pointer;
-  }
+}
 .servicesIcon {
     font-size: 36px;
     text-align: center;
@@ -46,24 +52,36 @@
 .servicesText:hover {
     border: 1px solid #008000;
 }
+
+/* Navbar */
 .navbarScroll.navbarDark {
     background-color: #000000;
 }
+
+/* Social Icons */
 .social-icons {
     font-size: 36px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-twitch:hover {
     color: #008000;
 }
 .fab {
     color: #000000;
 }
-/* footer styling */
+
+/* Footer Styling */
 #footer {
     background-color: #808080;
     text-align: center;
+    padding: 5px 0;
 }
+
+/* Section Spacing */
 #about, #services, #portfolio, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
@@ -71,12 +89,48 @@
 #contact {
     padding-bottom: 4rem;
 }
+
+/* Cards for All Sections */
+section .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Section Text */
+section p, section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555555;
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
     .imageAboutPage {
         margin: 20px auto;
     }
-<<<<<<< HEAD:index.css
+    .hero_desc {
+        font-size: 1.5rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    section p, section li {
+        font-size: 1rem;
+    }
+    section .card {
+        padding: 20px;
+    }
 }
-=======
-}
->>>>>>> b1dcca119b255a3b89bbd5616bb62d9799a830ad:assets/css/index.css
