@@ -477,7 +477,8 @@
                   <h3>Kirim Pesan</h3>
                 </div>
               </div>
-              <form action="https://formspree.io/f/xnqkjdjy" method="POST">
+              <form id="contact-form">
+				  <input type="hidden" name="time" id="contact-time">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group-custom">
@@ -494,11 +495,11 @@
                 </div>
                 <div class="input-group-custom">
                   <i class="fa-solid fa-heading"></i>
-                  <input type="text" name="subject" placeholder="Subjek" required>
+                  <input type="text" name="title" placeholder="Subjek" required>
                 </div>
                 <div class="input-group-custom textarea-group">
                   <i class="fa-solid fa-message"></i>
-                  <textarea name="text" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+                  <textarea name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">
                   <span>Kirim Pesan</span>
@@ -667,5 +668,37 @@
         });
       });
   </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init({
+        publicKey: "67hTF5GI1yLHpXIdq"
+    });
+    const contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const submitButton = contactForm.querySelector(".btn-submit");
+        const buttonText = submitButton.querySelector("span");
+        document.getElementById("contact-time").value = new Date().toLocaleString("id-ID");
+        buttonText.textContent = "Mengirim...";
+        submitButton.disabled = true;
+        emailjs.sendForm(
+            "service_8bymjoj",
+            "template_df94ebp",
+            contactForm
+        )
+        .then(function () {
+            alert("Pesan berhasil dikirim.");
+            contactForm.reset();
+            buttonText.textContent = "Kirim Pesan";
+            submitButton.disabled = false;
+        })
+        .catch(function (error) {
+            console.error("EmailJS Error:", error);
+            alert("Pesan gagal dikirim.");
+            buttonText.textContent = "Kirim Pesan";
+            submitButton.disabled = false;
+        });
+    });
+</script>
 </body>
 </html>
